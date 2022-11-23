@@ -1,0 +1,44 @@
+﻿@page
+@model host.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Index.cshtml</title>
+    <link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/app.css" rel="stylesheet" asp-append-version="true" />
+    <style type="text/css">
+        html, body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h3>This is Index.cshtml in the Host application.</h3>
+                <ul>
+                    <li><a href="https://localhost:7001">App 1</a> 🔴</li>
+                    <li><a href="https://localhost:7002">App 2</a> 🟢</li>
+                    <li><a href="https://localhost:7003">App 3</a> 🔵</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
