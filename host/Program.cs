@@ -97,6 +97,26 @@ public static class Program
             });
         });
 
+        app.MapWhen(ctx => ctx.Request.Host.Port == 7004, first =>
+        {
+            first.Use((ctx, nxt) =>
+            {
+                ctx.Request.Path = "/menu" + ctx.Request.Path;
+                return nxt();
+            });
+
+            first.UseBlazorFrameworkFiles("/menu");
+            first.UseStaticFiles();
+            first.UseStaticFiles("/menu");
+            first.UseRouting();
+
+            first.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+                endpoints.MapFallbackToFile("/menu/{*path:nonfile}", "menu/index.html");
+            });
+        });
+
         app.Run();
     }
 }
