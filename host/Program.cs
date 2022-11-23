@@ -26,7 +26,7 @@ public static class Program
         }
 
         app.UseHttpsRedirection();
-        
+
         app.MapWhen(ctx => ctx.Request.Host.Port == 7000, first =>
         {
             first.UseStaticFiles();
@@ -36,7 +36,7 @@ public static class Program
                 endpoints.MapRazorPages();
             });
         });
-        
+
         app.MapWhen(ctx => ctx.Request.Host.Port == 7001, first =>
         {
             first.Use((ctx, nxt) =>
