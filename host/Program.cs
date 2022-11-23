@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 
 // https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/multiple-hosted-webassembly?view=aspnetcore-7.0
 // https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio
+// https://icon-sets.iconify.design/oi/
 
 namespace group;
 
