@@ -1,43 +1,68 @@
 ﻿@page
 @model host.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Home page";
 }
 
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Index.cshtml</title>
-    <link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/app.css" rel="stylesheet" asp-append-version="true" />
-    <style type="text/css">
-        html, body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Index.cshtml</title>
+	<link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/css/app.css" rel="stylesheet" asp-append-version="true" />
+	<style type="text/css">
+		html,
+		body {
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
 
-        .container {
-            font-weight: bold;
-            font-size: 1rem;
-        }
+		.container {
+			font-weight: bold;
+			font-size: 1rem;
+		}
 
-        li {
-            margin-bottom: 0.5rem;
-            margin-left: 2rem;
-        }
-    </style>
+		li {
+			margin-bottom: 0.5rem;
+			margin-left: 2rem;
+		}
+	</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col">
-                <h3>This is Index.cshtml in the ASP.NET MVC Host application.</h3>
+	<div class="container">
+		<div class="row mt-5 d-none">
+			<div class="col">
+				<h3>This is Index.cshtml in the ASP.NET MVC Host application.</h3>
 				@foreach (var link in Model.Links)
 				{
-					<h3><span class="oi oi-home" aria-hidden="true" style="color: @link.Key.Item2">&nbsp;</span><a href="@link.Value">@link.Key.Item1</a></h3>
+					<h3>
+						<span class="oi oi-home" aria-hidden="true" style="color: @link.Key.Item2">&nbsp;</span>
+						<a href="@link.Value">@link.Key.Item1</a>
+					</h3>
 				}
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col d-flex align-items-center justify-content-center">
+				<div class="card" style="width: 500px; padding: 40px;">
+					<h3 class="card-title mb-4">Hosted Blazor WebAssembly</h3>
+					<div class="input-group input-group-lg mb-4">
+						<span class="input-group-text" style="width: 8rem;">Username</span>
+						<input type="text" class="form-control" placeholder="username">
+					</div>
+					<div class="input-group input-group-lg mb-4">
+						<span class="input-group-text" style="width: 8rem;">Password</span>
+						<input type="password" class="form-control" placeholder="password">
+					</div>
+					<div class="input-group input-group-lg d-grid">
+						<a href="https://localhost:7004" type="button" class="btn btn-primary">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
