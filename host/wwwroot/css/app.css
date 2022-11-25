@@ -34,6 +34,12 @@ a, .btn-link {
     outline: 1px solid red;
 }
 
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+	border-bottom-right-radius: 0.3rem !important;
+	border-top-right-radius: 0.3rem !important;
+}
+
 .validation-message {
     color: red;
 }
