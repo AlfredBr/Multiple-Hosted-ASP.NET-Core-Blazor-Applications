@@ -1,8 +1,7 @@
 # build
 FROM mcr.microsoft.com/dotnet/sdk:latest AS build
 WORKDIR /app
-#RUN git clone https://github.com/AlfredBr/Multiple-Hosted-ASP.NET-Core-Blazor-Applications.git src
-COPY . src
+RUN git clone https://github.com/AlfredBr/Multiple-Hosted-ASP.NET-Core-Blazor-Applications.git src
 WORKDIR /app/src
 RUN dotnet restore
 RUN dotnet publish -c Release -o /app/out
