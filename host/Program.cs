@@ -26,7 +26,7 @@ public static class Program
             app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection();
 
         app.MapWhen(ctx => ctx.Request.Host.Port == 7000, first =>
         {
