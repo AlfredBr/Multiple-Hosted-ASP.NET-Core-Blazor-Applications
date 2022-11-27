@@ -14,8 +14,8 @@
     <ProjectReference Include="..\app1\app1.csproj" />
     <ProjectReference Include="..\app2\app2.csproj" />
     <ProjectReference Include="..\app3\app3.csproj" />
-    <ProjectReference Include="..\models\models.csproj" />
     <ProjectReference Include="..\menu\menu.csproj" />
+    <ProjectReference Include="..\models\models.csproj" />
   </ItemGroup>
 
 
