@@ -10,9 +10,6 @@
 *.userosscache
 *.sln.docstates
 
-docker-build.ps1
-docker-run.ps1
-
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
