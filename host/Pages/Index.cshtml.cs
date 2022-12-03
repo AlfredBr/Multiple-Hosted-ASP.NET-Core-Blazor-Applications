@@ -5,9 +5,11 @@ namespace host.Pages;
 
 public class IndexModel : PageModel
 {
-    public string Hostname { get; set; } = string.Empty;
+    public string HostName { get; set; } = string.Empty;
+    public string MachineName { get; set; } = string.Empty;
     public void OnGet()
     {
-        Hostname = System.Environment.MachineName;
+		HostName = Request.Host.Host;
+        MachineName = System.Environment.MachineName;
     }
 }
