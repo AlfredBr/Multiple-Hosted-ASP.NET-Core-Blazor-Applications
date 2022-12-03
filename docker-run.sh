@@ -1,3 +1,4 @@
+docker kill `docker ps -f name="blazor-host" -q` > /dev/null 2>&1
 docker run \
 	--rm \
 	-d \
